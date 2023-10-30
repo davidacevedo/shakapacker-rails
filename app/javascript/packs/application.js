@@ -17,13 +17,18 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HelloMessage from "../components/App";
+import App from "../components/App";
 import { Article } from "../components/Article";
+import Articles from "../components/Articles";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HelloMessage />,
+    element: <App />,
+  },
+  {
+    path: "/articles_react",
+    element: <Articles />,
   },
   {
     path: "/articles_react/:id",
