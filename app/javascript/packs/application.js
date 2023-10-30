@@ -16,11 +16,19 @@
 
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HelloMessage from "../components/App";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HelloMessage />,
+  },
+]);
 
 const container = document.getElementById("root");
 const root = createRoot(container);
 
 document.addEventListener("DOMContentLoaded", () => {
-  root.render(<HelloMessage name="World" />);
+  root.render(<RouterProvider router={router} />);
 });
