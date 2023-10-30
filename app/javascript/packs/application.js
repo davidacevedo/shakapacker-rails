@@ -18,11 +18,16 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HelloMessage from "../components/App";
+import { Article } from "../components/Article";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HelloMessage />,
+  },
+  {
+    path: "/articles_react/:id",
+    element: <Article />,
   },
 ]);
 

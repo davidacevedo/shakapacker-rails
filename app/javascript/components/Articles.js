@@ -1,10 +1,5 @@
 import React from "react";
-
-const getArticles = async () => {
-  const response = await fetch("/articles_v2");
-  const articles = await response.json();
-  return articles;
-};
+import { getArticles } from "../api/articles";
 
 const Articles = () => {
   const [articles, setArticles] = React.useState([]);
