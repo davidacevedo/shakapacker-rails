@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :articles
+  resources :articles_v2
   root to: 'site#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
